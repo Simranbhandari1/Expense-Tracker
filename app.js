@@ -10,25 +10,20 @@ const table = document.getElementsByTagName("table")[0];
 
 // Second code → stores static values at load time → won’t update when user types later.
 btn.addEventListener("click",() => {
+   
+
+    let newRow = document.createElement("tr");
+ if(!catagory_val || !amount_val  || !date_val)
+    return;
+  localStorage.setItem("catagory",catagory_val);
+  localStorage.setItem("amount",amount_val);
+  localStorage.setItem("date",date_val);
+  
+
     catagory_val=catagory.value;
     amount_val=amount.value;
     date_val=date.value;
-
-    let newRow = document.createElement("tr");
-
-//     let td1 = document.createElement("td");
-//     td1.textContent=catagory_val;
-
-//     let td2=document.createElement("td");
-//     td2.textContent=amount_val;
-
-//     let td3 =document.createElement("td");
-//     td3.textContent=date_val;
-    
-//       tr.appendChild(td1);
-//   tr.appendChild(td2);
-//   tr.appendChild(td3);
-//   tbody.appendChild(tr); 
+ 
    newRow.classList.add("expense-row");
     newRow.innerHTML=`
     <td>${catagory_val}</td>
@@ -38,10 +33,13 @@ btn.addEventListener("click",() => {
     <td><button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
     `;
 
+
    table.appendChild(newRow);
    catagory.value="";
    amount.value="";
    date.value="";
+
+
 
    
 

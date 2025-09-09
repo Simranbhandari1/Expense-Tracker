@@ -19,7 +19,7 @@ input{
     height: 20px;
     padding: 10px;
     border: 2px solid rgb(28, 73, 79);
-    border-radius: 20px;
+    border-radius: 6px;
     font-size: 15px;
     
 }
@@ -32,7 +32,7 @@ button{
      width: 200px;
     height: 40px;
     border: 2px solid rgb(28, 73, 79);
-    border-radius: 20px;
+    border-radius: 6px;
       font-size: 15px;
 
 }
