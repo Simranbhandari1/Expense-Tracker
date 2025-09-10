@@ -60,7 +60,6 @@
 
 //   })
 // };
-
 window.onload = function () {
   const catagory = document.getElementById("catagory");
   const amount = document.getElementById("amount");
@@ -143,4 +142,3 @@ window.onload = function () {
     date.value = "";
   });
 };
-
