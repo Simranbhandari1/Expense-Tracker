@@ -103,6 +103,7 @@ table{
    color: black;
    padding: 2px;
    border-radius: 2px;
+   font-size: 20px;
 }
 
 
@@ -129,7 +130,7 @@ table{
 }
 
 .total-amount:hover{
-    background-color:White;
-    color: black;
+    background-color:rgb(66, 94, 98);
+    color: white;
     
 }
