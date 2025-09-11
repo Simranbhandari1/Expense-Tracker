@@ -21,9 +21,28 @@ window.onload = function () {
       <td><button class="update-btn"><i class="fa-solid fa-pen"></i></button></td>
       <td><button class="delete-btn"><i class="fa-solid fa-trash"></i></button></td>
     `;
+
+    newRow.querySelector(".delete-btn").addEventListener("click" ,()=>{
+      expenses.splice(index,1)
+      localStorage.setItem("expenses", JSON.stringify(expenses));
+    renderTable();
+    });
+    
+     newRow.querySelector(".update-btn").addEventListener("click", () =>{
+       catagory.value = exp.catagory;
+       amount.value = exp.amount;
+       date.value = exp.date;
+
+       expenses.splice(index,1);
+       localStorage.getItem("expenses",JSON.stringify(expenses));
+       renderTable();
+
+    });
+
     table.appendChild(newRow);
   });
  }
+
 
 
   // ✅ Step 2: Add new expense on button click
