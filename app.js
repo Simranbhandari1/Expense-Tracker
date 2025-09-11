@@ -4,10 +4,16 @@ window.onload = function () {
   const date = document.getElementById("date");
   const btn = document.getElementById("sub-btn");
   const table = document.getElementsByTagName("table")[0];
+ 
   
 
   // ✅ Step 1: Load saved expenses and render them on table
   let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+   function updateTotal() {
+    const total = expenses.reduce((sum, exp) => sum + Number(exp.amount), 0);
+    document.getElementById("total").textContent = total;
+  }
+
  function renderTable(){
   table.querySelectorAll(".expense-row").forEach((row) => row.remove());
   
@@ -36,11 +42,15 @@ window.onload = function () {
        expenses.splice(index,1);
        localStorage.getItem("expenses",JSON.stringify(expenses));
        renderTable();
+      
 
     });
 
+
+
     table.appendChild(newRow);
   });
+  updateTotal();
  }
 
 
@@ -89,6 +99,7 @@ window.onload = function () {
 
   // })
   renderTable();
+  updateTotal(); 
 };
 
 
