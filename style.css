@@ -108,14 +108,14 @@ table{
 
 
 .expense-row button{
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     
 }
 
 .total-amount{
-    height: 70px;
+    height: 50px;
     border: 1px solid black;
     width: 100vw;
     align-content: center;
@@ -129,7 +129,7 @@ table{
 }
 
 .total-amount:hover{
-    background-color: rgb(28, 73, 79);
-    color: white;
+    background-color:White;
+    color: black;
     
 }
